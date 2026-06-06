@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+:root {
+  --color-primary: #2f5d50;
+  --color-primary-dark: #23463d;
+  --color-primary-light: #e4efe8;
+
+  --color-secondary: #9f4f39;
+  --color-secondary-dark: #7b3928;
+  --color-secondary-light: #f7e7e1;
+
+  --color-accent: #9f6c34;
+  --color-accent-dark: #794f22;
+  --color-accent-light: #f6ecde;
+
+  --bg-page: #f4efe6;
+  --bg-app: #fcfaf6;
+  --bg-card: #ffffff;
+  --border-card: #e4d8c8;
+
+  --text-main: #201914;
+  --text-muted: #594b42;
+  --text-inactive: #74655c;
+  --text-on-primary: #ffffff;
+
+  --shadow-soft: 0 10px 30px -20px rgba(32, 25, 20, 0.35);
+  --shadow-glass: 0 8px 28px 0 rgba(32, 25, 20, 0.08);
+
+  --bg-app-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.025'/%3E%3C/svg%3E"),
+    radial-gradient(circle at 50% 0%, #fefdfb 0%, #f7f4eb 100%);
+}
+
+@theme {
+  --color-primary: var(--color-primary);
+  --color-primary-dark: var(--color-primary-dark);
+  --color-primary-light: var(--color-primary-light);
+
+  --color-secondary: var(--color-secondary);
+  --color-secondary-dark: var(--color-secondary-dark);
+  --color-secondary-light: var(--color-secondary-light);
+
+  --color-accent: var(--color-accent);
+  --color-accent-dark: var(--color-accent-dark);
+  --color-accent-light: var(--color-accent-light);
+
+  --color-bg-page: var(--bg-page);
+  --color-bg-app: var(--bg-app);
+  --color-bg-card: var(--bg-card);
+  --color-border-card: var(--border-card);
+
+  --color-text-main: var(--text-main);
+  --color-text-muted: var(--text-muted);
+  --color-text-inactive: var(--text-inactive);
+  --color-text-white: var(--text-on-primary);
+
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  html {
+    background-color: var(--bg-page);
+    color-scheme: light;
+  }
+
+  body {
+    @apply bg-bg-page text-text-main font-sans antialiased;
+    margin: 0;
+    min-height: 100vh;
+    background-color: var(--bg-page);
+    background-image: radial-gradient(circle at top, #fffaf3 0%, #f4efe6 58%, #efe7db 100%);
+    overflow-x: hidden;
+    overscroll-behavior-y: none;
+  }
+
+  #root {
+    min-height: 100vh;
+  }
+}
+
+@layer utilities {
+  .bg-cream-texture {
+    background-color: var(--bg-app);
+    background-image: var(--bg-app-image);
+    background-attachment: scroll;
+  }
+
+  .glass {
+    background-color: rgba(252, 250, 246, 0.92);
+    backdrop-filter: blur(18px);
+    border-top: 1px solid rgba(228, 216, 200, 0.95);
+    box-shadow: 0 -10px 30px -18px rgba(32, 25, 20, 0.2);
+  }
+
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom, 20px);
+  }
+}
