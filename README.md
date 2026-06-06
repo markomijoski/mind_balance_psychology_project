@@ -1,16 +1,39 @@
-# React + Vite
+# MindBalance — апликација за емоционално благосостојба
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+MindBalance е едноставна, приватна и локално-ориентирана веб апликација за дневно бележење на расположение и навики. Целта е да помогне на корисниците да следат мали чекори за ментално здравје, да видат трендови и да добијат кратки практични совети.
 
-Currently, two official plugins are available:
+Дефинирање на идеја
+- Кој проблем го решавате?
+	- Многу луѓе немаат едноставен и приватен начин да ги следат своите емоционални состојби и дневни навики. Ова го отежнува препознавањето на шаблони и навремено превземање мерки.
+- За која целна група?
+	- Луѓе кои сакаат едноставен дигитален дневник за ментално здравје: студенти, професионалци, или секој што сака да гради навика на кратки дневни проверувања (check-ins).
+- Како функционира вашето решение?
+	- Апликацијата нуди: едноставен дневен Check-In (расположение, спиење, стрес, време на екран), преглед на последните записи и визуелизација на основни метрики. Сите податоци се чуваат локално во прелистувачот (localStorage), без бекенд и без споделување на податоци по дифолт.
+- Каков impact очекувате?
+	- Очекуваме корисниците да стекнат подобро сознание за своите навики, да забележат трендови и да превземат мали промени (подобро спиење, помал екран-време) кои вкупно доведуваат до подобро благосостојба.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Краток технички опис
+- Frontend: React + Vite
+- Стил: Tailwind CSS и користени CSS променливи за тема
+- Складирање: localStorage (локално, без сервер)
+- Деплој: Поддржано за статичко хостирање (на пр. GitHub Pages)
 
-## React Compiler
+Како да се покрене локално
+1. Инсталирај зависности:
+```bash
+npm install
+```
+2. За развојна верзија со HMR:
+```bash
+npm run dev
+```
+3. За билд и подготовка за деплој:
+```bash
+npm run build
+```
+4. (Опционално) Публикување на GitHub Pages (ако е конфигурирано):
+```bash
+npm run deploy
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Ако сакате, можам да ја прилагодам оваа верзија на README со дополнителни детали за академската презентација или да додадеме краток секшен "Како да се тестира".
